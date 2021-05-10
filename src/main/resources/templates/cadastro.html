@@ -31,22 +31,36 @@
 							placeholder="CPF *" onkeypress="$(this).mask('000.000.000-00');">
 					</div>
 					<div class="mb-3">
-						<input type="password" class="form-control" name="password"
+						<input type="password" class="form-control" id="myInput" name="password"
 							placeholder="Senha *">
 					</div>
+
+					<input type="checkbox" onclick="myFunction()">Show Password 
 
 					<small class="form-text text-muted d-block">(*) Campos
 						obrigatórios</small>
 
 
 					<button type="submit" class="btn btn-primary"
-						style="margin-top: 10px;">Entrar
+						style="margin-top: 10px;">Criar Conta
 					</button>
 					<a href="/login" class="btn btn-light" style="margin-top: 10px;" role="button">Voltar</a>
 				</form>
 			</div>
 		</div>
 	</section>
+	
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myInput");
+			  if (x.type === "password") {
+			    x.type = "text";
+			  } else {
+			    x.type = "password";
+			  }
+			} 
+	</script>
+	
 </body>
 
 </html>

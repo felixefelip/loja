@@ -61,7 +61,7 @@ public class UsuarioController {
 		usuario.setUsername(usuario.getEmail());
 
 		usuarioService.save(usuario);
-		return "redirect:/posts";
+		return "redirect:/";
 	}
 
 	@RequestMapping(value = "/cadastro", method = RequestMethod.GET)
