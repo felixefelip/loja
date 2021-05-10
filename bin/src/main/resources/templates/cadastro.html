@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>Cadastrar-se</title>
+</head>
+
+<body>
+	<header th:replace="fragments/header">
+	
+	</header>
+
+	<section>
+		<div class="container">
+			<div class="alert alert-danger alert-dismissible" role="alert" th:if="${param.error}">
+				<span>Usuário ou senha inválido</span>
+			</div>
+			<div>
+				<th:block th:include="/fragments/mensagemValidacao"></th:block>
+				<form method="post">
+					<h1>Criar Conta</h1>
+					<div class="mb-3">
+						<input type="text" class="form-control" name="nome"
+							placeholder="Nome Completo*">
+					</div>
+					<div class="mb-3">
+						<input type="text" class="form-control" name="email"
+							placeholder="Email *">
+					</div>
+					<div class="mb-3">
+						<input type="text" class="form-control" name="cpf"
+							placeholder="CPF *" onkeypress="$(this).mask('000.000.000-00');">
+					</div>
+					<div class="mb-3">
+						<input type="password" class="form-control" name="password"
+							placeholder="Senha *">
+					</div>
+
+					<small class="form-text text-muted d-block">(*) Campos
+						obrigatórios</small>
+
+
+					<button type="submit" class="btn btn-primary"
+						style="margin-top: 10px;">Entrar
+					</button>
+					<a href="/login" class="btn btn-light" style="margin-top: 10px;" role="button">Voltar</a>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

@@ -35,7 +35,7 @@ public class DummyData {
 	@PostConstruct
 	public void savePosts() throws IOException {
 
-		// criarRoles();
+		criarRoles();
 		// criarNovosUsuarios();
 		// criarNovosProdutos();
 		criarPastas();
@@ -68,14 +68,16 @@ public class DummyData {
 	}
 
 	public void criarRoles() {
-		Role roleAdmin = new Role();
-		roleAdmin.setRole("ADMIN");
-
-		Role roleUser = new Role();
-		roleUser.setRole("USER");
-
-		roleService.save(roleAdmin);
-		roleService.save(roleUser);
+		if(roleService.findByRole("ADMIN") == null) {
+			Role roleAdmin = new Role();
+			roleAdmin.setRole("ADMIN");
+	
+			Role roleUser = new Role();
+			roleUser.setRole("USER");
+	
+			roleService.save(roleAdmin);
+			roleService.save(roleUser);
+		}
 	}
 
 	public void criarNovosProdutos() {

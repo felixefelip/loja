@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+<title>MyCodeBlog</title>
+</head>
+
+<body>
+
+	<header th:replace="fragments/header"> </header>
+
+	<section>
+		<div class="container" style="width: 60%; padding-bottom: 30px;">
+
+			<nav>
+				<ol class="breadcrumb"
+					style="background-color: white; padding-left: 0px;">
+					<li class="breadcrumb-item active" aria-current="page">Produtos</li>
+				</ol>
+			</nav>
+		
+			<div class="row">
+			<div class="card-group col-md-3 pb-4" th:each="produto : ${produtos}">
+				<div th:id="${produto.id}" class="card">
+						<div class="block-img">
+							<img id="linkImagem" name="linkImagem" class="card-img-top" th:src="@{${produto.imagemPath}}" alt="Card image cap" width="90px" height="110px"/>
+						</div>
+						<div class="card-body">
+							<a><h4
+							class="card-title"
+							style="font-weight: bold; color: black; padding-top: 5px;">
+							<span th:text="${produto.descricao}"></span>
+						</h4></a>
+							<p class="card-subtitle text-muted" style="font-size: 0.8rem;">
+							<span th:text="${produto.cadastrador.nome}"></span>
+							<span th:text="${produto.data}"></span>
+						
+						</div>
+						
+						
+					
+				</div>
+			</div>
+			</div>
+
+		</div>
+	</section>
+	
+	<footer th:replace="fragments/footer"></footer>
+	
+</body>
+
+</html>
