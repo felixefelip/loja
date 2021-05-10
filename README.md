@@ -9,9 +9,10 @@
 - MySQL versão 8.0.23;
 - IDE Spring Tool Suite 4;
 
-Para rodar o projeto é preciso primeiro criar uma base de dados no MySQL com nome "loja" com o seguinte comando: 
+**Como rodar o projeto:**
+- Criar uma base de dados no MySQL com nome "loja" com o seguinte comando: 
+  CREATE SCHEMA ´teste´;
 
-CREATE SCHEMA ´teste´;
-
-Em seguida é preciso importar o projeto na IDE Spring Tool Suite, iniciá-lo e acessar no navegador o endereço: "http://localhost:8080".
+- Importar o projeto na IDE Spring Tool Suite 4;
+- Iniciá-lo e acessar no navegador o endereço: "http://localhost:8080".
 
