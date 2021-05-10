@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>Login Page</title>
+</head>
+
+<body>
+	<header th:replace="fragments/header">
+	
+	</header>
+
+	<section>
+		<div class="container">
+			<div class="alert alert-danger alert-dismissible" role="alert" th:if="${param.error}">
+				<span>Usuário ou senha inválido</span>
+			</div>
+			<div>
+				<!-- <th:block th:include="mensagemValidacao"></th:block> -->
+				<form th:action="@{/login}" method="post">
+					<h1>Fazer Login</h1>
+					<div class="mb-3">
+						<input type="text" class="form-control" name="username"
+							placeholder="Email *">
+					</div>
+					<div class="mb-3">
+						<input type="password" id="myInput" class="form-control" name="password"
+							placeholder="Senha *">
+					</div>
+
+					<input type="checkbox" onclick="myFunction()">Show Password 
+					
+					<small class="form-text text-muted d-block">(*) Campos
+						obrigatórios</small>
+
+
+					<button type="submit" class="btn btn-primary"
+						style="margin-top: 10px;">Entrar
+					</button>
+					<a href="/cadastro" class="btn btn-light" style="margin-top: 10px;" role="button">Cadastrar Usuário</a>
+					
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<script>
+		function myFunction() {
+		  var x = document.getElementById("myInput");
+			  if (x.type === "password") {
+			    x.type = "text";
+			  } else {
+			    x.type = "password";
+			  }
+			} 
+	</script>
+
+</body>
+
+</html>

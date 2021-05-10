@@ -1,0 +1,69 @@
+ <!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<title>MyCodeBlog</title>
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+	<link
+		href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.css"
+		rel="stylesheet">
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.12/summernote-bs4.js"></script>
+</head>
+
+<body>
+	<header th:replace="fragments/header">
+	
+	</header>
+
+	<section>
+		<div class="container">
+			<nav aria-label="breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item" aria-current="page"><a
+						href="/">Produtos</a></li>
+					<li class="breadcrumb-item active" aria-current="page">Novo
+						Produto</li>
+				</ol>
+			</nav>
+
+			<div>
+				<th:block th:include="/fragments/mensagemValidacao"></th:block>
+				<form method="post" enctype="multipart/form-data">
+					
+					<div class="mb-3">
+						<input type="text" class="form-control" name="descricao"
+							placeholder="Nome do Produto *">
+					</div>
+					
+					<input type="file" name="fileImage" accept="image/png, image/jpeg"/>
+		
+					<small class="form-text text-muted d-block">(*) Campos
+						obrigatórios</small>
+
+
+					<button type="submit" class="btn btn-primary"
+						style="margin-top: 10px;">Cadastrar Usuário</button>
+					<a href="/" class="btn btn-light" role="button"
+						style="margin-top: 10px;">Voltar</a>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<script>
+		$("#summernote").summernote({
+			placerholder: "Texto *",
+			tabsize: 2,
+			height: 300
+		});
+	</script>
+
+	<footer th:replace="fragments/footer"></footer>
+</body>
+
+</html>
