@@ -11,6 +11,6 @@
 
 **Como rodar o projeto:**
 - Criar uma base de dados no MySQL com nome "loja" com o seguinte comando: 
-  CREATE SCHEMA ´teste´;
+  CREATE SCHEMA loja;
 - Importar o projeto na IDE Spring Tool Suite 4;
 - Iniciá-lo e acessar no navegador o endereço: "http://localhost:8080".
