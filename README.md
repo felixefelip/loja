@@ -1,4 +1,4 @@
-# loja
+# Loja Alvo em Foco
 
 Neste projeto foi utilizado tecnologias como:
 - Java versão 11;
