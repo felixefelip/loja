@@ -1,6 +1,6 @@
 # Loja Alvo em Foco
 
-**Neste projeto foi utilizado tecnologias como:**
+**Algumas Tecnologias Utilizadas Neste Projeto:**
 - Java versão 11;
 - Framework Spring Boot; 
 - API de persistência JPA;
