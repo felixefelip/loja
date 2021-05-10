@@ -15,7 +15,7 @@
 - Importar o projeto na IDE Spring Tool Suite 4;
 - Iniciá-lo e acessar no navegador o endereço: "http://localhost:8080".
 
-**Screenshots**
+**Screenshots:**
 
 ![Captura de tela_2021-05-10_13-32-28](https://user-images.githubusercontent.com/56006792/117693611-98194080-b194-11eb-982c-471720cba77d.png)
 
