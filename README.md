@@ -5,9 +5,9 @@
 - Framework Spring Boot; 
 - API de persistência JPA;
 - Template Engine Thymeleaf;
-- Bootstrap.
+- Bootstrap;
 - MySQL versão 8.0.23;
-- IDE Spring Tool Suite 4;
+- IDE Spring Tool Suite 4.
 
 **Como rodar o projeto:**
 - Criar uma base de dados no MySQL com nome "loja" com o seguinte comando: 
